@@ -2,17 +2,11 @@ name: {{project_name.snakeCase()}}_workspace
 
 packages:
   - .
-  {{#sub_packages}}
-  - packages/
-  *{{/sub_packages}}
+  - packages/*
 
-{{^publishable}}
-{{#sub_packages}}
 command:
   version:
     updateGitTagRefs: true
-{{/sub_packages}}
-{{/publishable}}
 
 scripts:
   analyze:
