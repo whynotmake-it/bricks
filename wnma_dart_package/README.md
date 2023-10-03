@@ -38,5 +38,5 @@ mason add -g wnma_dart_package
 - ✅ Changelog
 - ✅ Automated using [Melos](https://github.com/invertase/melos)
 
-Inspired by [Very Good Ventures][https://verygood.ventures] 🦄
+Inspired by [Very Good Ventures](https://verygood.ventures) 🦄
 
