@@ -1,0 +1,29 @@
+name: wnma_design_token_package
+description: Why not make a design token package? Powered by whynotmake.it
+repository: https://github.com/whynotmake-it/bricks
+version: 0.0.1
+
+environment:
+  mason: ">=0.1.0-dev.50 <0.1.0"
+
+vars:
+  project_name:
+    type: string
+    description: The package name
+    default: my_design_tokens
+    prompt: What is the project name?
+  description:
+    type: string
+    description: The package description
+    default: A package for managing design tokens.
+    prompt: What is the project description?
+  publishable:
+    type: boolean
+    description: Whether the generated package is intended to be published.
+    default: false
+    prompt: Will the package be published?
+  main:
+    type: boolean
+    description: Whether the generated package will include melos for managing sub-packages.
+    default: true
+    prompt: Is this the main package that will include melos, .github, and sub-packages in a /packages directory?
