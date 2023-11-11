@@ -26,6 +26,7 @@ scripts:
   test:select:
     run: dart test
     exec:
+      failFast: true
       concurrency: 6
     packageFilters:
       dirExists: test
@@ -41,6 +42,7 @@ scripts:
       rm -rf coverage/test/
       rm -rf coverage/coverage.json
     exec:
+      failFast: true
       concurrency: 6
     packageFilters:
       dirExists: test
