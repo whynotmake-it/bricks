@@ -7,7 +7,9 @@ packages:
 command:
   bootstrap:
     hooks:
-      pre: dart pub global activate coverage
+      pre: | 
+        dart pub global activate coverage 
+        dart pub global activate full_coverage
   version:
     updateGitTagRefs: true
 
@@ -38,6 +40,7 @@ scripts:
 
   coverage:select:
     run: |
+      dart pub global run full_coverage
       dart pub global run coverage:test_with_coverage
       rm -rf -f coverage/test/
       rm -f coverage/coverage.json
