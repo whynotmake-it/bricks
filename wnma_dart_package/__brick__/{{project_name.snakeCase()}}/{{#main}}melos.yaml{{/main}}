@@ -7,7 +7,9 @@ packages:
 command:
   bootstrap:
     hooks:
-      pre: dart pub global activate coverage
+      pre: | 
+        dart pub global activate coverage 
+        dart pub global activate full_coverage
   version:
     updateGitTagRefs: true
 
@@ -26,6 +28,7 @@ scripts:
   test:select:
     run: dart test
     exec:
+      failFast: true
       concurrency: 6
     packageFilters:
       dirExists: test
@@ -37,10 +40,13 @@ scripts:
 
   coverage:select:
     run: |
-      dart test --coverage=coverage && 
-      dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info -c --report-on=lib &&
-      rm -rf coverage/test/
+      dart pub global run full_coverage
+      dart test --coverage=coverage
+      dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info -c --report-on=lib
+      rm -rf -f coverage/test/
+      rm -f coverage/coverage.json
     exec:
+      failFast: true
       concurrency: 6
     packageFilters:
       dirExists: test
