@@ -14,6 +14,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  mocktail: ^1.0.3
   lintervention: ^0.1.1
   {{#main}}melos: ^5.2.1{{/main}}
+  mocktail: ^1.0.3
