@@ -16,7 +16,7 @@ Future<void> run(HookContext context) async {
 
   if (context.vars['main'] == false) {
     context.logger.alert(
-      "Make sure to run 'melos bootstrap' in your main package",
+      "Make sure to run 'melos bootstrap'",
     );
   }
 }
