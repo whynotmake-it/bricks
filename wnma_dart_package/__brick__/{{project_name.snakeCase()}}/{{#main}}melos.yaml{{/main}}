@@ -12,6 +12,7 @@ command:
         dart pub global activate full_coverage
   version:
     updateGitTagRefs: true
+    workspaceChangelog: false
 
 scripts:
   analyze:
