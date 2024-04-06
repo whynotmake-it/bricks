@@ -1,6 +1,6 @@
 name: {{project_name.snakeCase()}}
 description: {{{description}}}
-version: 0.1.0+1
+version: 0.1.0
 {{^publishable}}publish_to: none{{/publishable}}
 
 environment:
