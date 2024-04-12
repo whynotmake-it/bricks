@@ -10,3 +10,6 @@ Check out the the subfolders for more information on each brick.
 
 ### [wnma_dart_package](wnma_dart_package/README.md)
 A template for a new Dart package including the option to have subpackages.
+
+### [wnma_flutter_package](wnma_flutter_package/README.md)
+A template for a new Flutter package including the option to have subpackages.
