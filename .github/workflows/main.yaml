@@ -10,9 +10,11 @@ on:
 
 jobs:
   semantic_pull_request:
+    name: Semantic Pull Request
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
 
   build_check:
+    name: Build Check
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -38,12 +40,13 @@ jobs:
           mason get
           mason make ${{ matrix.package }} -c config.json -o output --on-conflict overwrite
       
-      - name: Ⓜ️ Set up Melos
-        uses: bluefireteam/melos-action@v3
-      
       - name: 🧪 Run Analyze
-        run: melos run analyze
+        run: |
+          cd outputs/test_package
+          melos run analyze
 
       - name: 📝 Run Test
-        run: melos run coverage
+        run: | 
+          cd outputs/test_package
+          melos run coverage
   
