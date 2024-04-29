@@ -1,0 +1,5 @@
+bricks:
+  wnma_dart_package:
+    path: wnma_dart_package
+  wnma_flutter_package:
+    path: wnma_flutter_package

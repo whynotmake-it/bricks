@@ -1,6 +1,9 @@
 name: ci
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -9,4 +12,38 @@ jobs:
   semantic_pull_request:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
 
+  build_check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package: [wnma_dart_package, wnma_flutter_package]
+
+    defaults:
+      run:
+        working-directory: ${{ matrix.package }}
+    
+    steps:
+      - name: 📚 Checkout
+        uses: actions/checkout@v4
+      
+      - name: 🐦 Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+        
+      - name: 🧱 Mason
+        run: |
+          dart pub global activate mason_cli
+          mason get
+          mason make ${{ matrix.package }} -c config.json -o output --on-conflict overwrite
+      
+      - name: Ⓜ️ Set up Melos
+        uses: bluefireteam/melos-action@v3
+      
+      - name: 🧪 Run Analyze
+        run: melos run analyze
+
+      - name: 📝 Run Test
+        run: melos run coverage
   
