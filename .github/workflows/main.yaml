@@ -1,4 +1,4 @@
-name: ci
+name: CI
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   semantic_pull_request:
-    name: Semantic Pull Request
+    name: Check PR Title
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
 
   build_check:
@@ -34,7 +34,7 @@ jobs:
           channel: 'stable'
           cache: true
         
-      - name: 🧱 Mason
+      - name: 🧱 Mason Make
         run: |
           dart pub global activate mason_cli
           mason get
@@ -42,11 +42,11 @@ jobs:
       
       - name: 🧪 Run Analyze
         run: |
-          cd outputs/test_package
+          cd output/test_package
           melos run analyze
 
       - name: 📝 Run Test
         run: | 
-          cd outputs/test_package
+          cd output/test_package
           melos run coverage
   

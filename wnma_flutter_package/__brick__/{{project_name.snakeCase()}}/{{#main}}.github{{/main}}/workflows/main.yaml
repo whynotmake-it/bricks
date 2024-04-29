@@ -1,4 +1,4 @@
-name: ci
+name: CI
 
 concurrency:
   group: ${{#mustacheCase}}github.workflow{{/mustacheCase}}-${{#mustacheCase}}github.ref{{/mustacheCase}}
@@ -14,6 +14,7 @@ on:
 
 jobs:
   semantic_pull_request:
+    name: Check PR Title
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
 
   flutter-check:
@@ -21,9 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
-      id-token: write
-      contents: write
-      checks: write
       pull-requests: write
     steps:
       - name: 📚 Checkout
