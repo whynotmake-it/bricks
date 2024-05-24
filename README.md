@@ -15,4 +15,4 @@ A template for a new Dart package including the option to have subpackages.
 A template for a new Flutter package including the option to have subpackages.
 
 ### [wnma_workspace](wnma_workspace/README.md)
-A template for a new Flutter Monorepo Workspace using Melos.
+A template for a new Flutter Monorepo Workspace using Melos, that has no top-level package.
