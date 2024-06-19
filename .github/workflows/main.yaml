@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        package: [wnma_dart_package, wnma_flutter_package]
+        package: [wnma_dart_package, wnma_flutter_package, wnma_workspace]
 
     defaults:
       run:

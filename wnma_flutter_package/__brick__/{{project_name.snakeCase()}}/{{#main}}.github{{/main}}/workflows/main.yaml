@@ -23,6 +23,7 @@ jobs:
     timeout-minutes: 10
     permissions:
       pull-requests: write
+      contents: write
     steps:
       - name: 📚 Checkout
         uses: actions/checkout@v4
@@ -68,5 +69,5 @@ jobs:
         run: melos run generate
 
       - name: 🔎 Check there are no uncommitted changes
-        run: git diff --exit-code
+        run: git add . && git diff --cached --exit-code
   
