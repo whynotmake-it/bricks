@@ -1,19 +1,14 @@
 name: {{project_name.snakeCase()}}
 description: {{{description}}}
 version: 0.1.0
-{{^publishable}}publish_to: none{{/publishable}}
+publish_to: none
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
   flutter: ">=3.10.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
-
+  
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   lintervention: ^0.1.1
-  {{#main}}melos: ^6.0.0{{/main}}
-  mocktail: ^1.0.3
+  melos: ^6.0.0
