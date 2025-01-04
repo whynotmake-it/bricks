@@ -6,15 +6,4 @@ Future<void> run(HookContext context) async {
   final progress = context.logger.progress('Running pub get');
   await Process.run('dart', ['pub', 'get']);
   progress.complete();
-
-  if (context.vars['main'] == true) {
-    final progress = context.logger.progress('Installing melos');
-    await Process.run('dart', ['pub', 'global', 'activate', 'melos']);
-    await Process.run('melos', ['bootstrap']);
-    progress.complete();
-  } else {
-    context.logger.alert(
-      "Make sure to run 'melos bootstrap'",
-    );
-  }
 }
