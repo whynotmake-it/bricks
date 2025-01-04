@@ -43,10 +43,10 @@ jobs:
       - name: 🧪 Run Analyze
         run: |
           cd output/test_package
-          melos run analyze
+          dart analyze . --fatal-infos
 
       - name: 📝 Run Test
         run: | 
           cd output/test_package
-          melos run coverage
+          flutter test .
   
