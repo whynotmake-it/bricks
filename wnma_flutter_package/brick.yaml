@@ -4,8 +4,8 @@ repository: https://github.com/whynotmake-it/bricks
 version: 0.0.1
 
 environment:
-  mason: ">=0.1.0-dev.50 <0.1.0"
-
+  mason: ">=0.1.0 <0.2.0"
+  
 vars:
   project_name:
     type: string
