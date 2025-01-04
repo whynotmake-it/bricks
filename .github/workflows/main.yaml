@@ -43,10 +43,12 @@ jobs:
       - name: 🧪 Run Analyze
         run: |
           cd output/test_package
-          melos run analyze
+          dart analyze . --fatal-infos
 
       - name: 📝 Run Test
+        # There are no tests in the workspace package
+        if: matrix.package != 'wnma_workspace'
         run: | 
           cd output/test_package
-          melos run coverage
+          flutter test .
   
