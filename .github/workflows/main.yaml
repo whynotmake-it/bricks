@@ -46,6 +46,8 @@ jobs:
           dart analyze . --fatal-infos
 
       - name: 📝 Run Test
+        # There are no tests in the workspace package
+        if: matrix.package != 'wnma_workspace'
         run: | 
           cd output/test_package
           flutter test .
