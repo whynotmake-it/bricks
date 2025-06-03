@@ -1,3 +1,7 @@
+## 0.1.1
+
+- feat: updated dependencies
+
 ## 0.1.0
 
 - **BREAKING** feat: removed the option to be a main package, since it is not the recommended usage of melos.
