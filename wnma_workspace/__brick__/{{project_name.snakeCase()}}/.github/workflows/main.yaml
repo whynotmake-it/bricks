@@ -37,7 +37,7 @@ jobs:
           cache: true
       
       - name: Ⓜ️ Set up Melos
-        uses: bluefireteam/melos-action@v3
+        uses: bluefireteam/melos-action@vb3ccbb59dd75a6c926d54684abd8c5cda074457a
 
       - name: 🧪 Run Analyze
         run: melos run analyze
@@ -67,7 +67,7 @@ jobs:
           cache: true
 
       - name: Ⓜ️ Set up Melos
-        uses: bluefireteam/melos-action@v3
+        uses: bluefireteam/melos-action@b3ccbb59dd75a6c926d54684abd8c5cda074457a
 
       - name: 🔨 Generate
         run: melos run generate

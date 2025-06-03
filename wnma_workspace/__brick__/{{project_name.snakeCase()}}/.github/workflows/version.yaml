@@ -8,6 +8,11 @@ on:
         required: false
         default: false
         type: boolean
+      graduate:
+        description: 'Graduate prereleases'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   prepare-release:
@@ -26,10 +31,11 @@ jobs:
         uses: subosito/flutter-action@v2
 
       - name: Ⓜ️ Set up Melos
-        uses: bluefireteam/melos-action@v3
+        uses: bluefireteam/melos-action@b3ccbb59dd75a6c926d54684abd8c5cda074457a
         with:
           run-versioning: ${{ inputs.prerelease == false }}
           run-versioning-prerelease: ${{ inputs.prerelease == true }}
+          run-versioning-graduate: ${{ inputs.graduate == true }}
           publish-dry-run: true
 
       - name: 🎋 Create Pull Request

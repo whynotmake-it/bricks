@@ -20,6 +20,6 @@ jobs:
         uses: subosito/flutter-action@v2
 
       - name: Ⓜ️ Set up Melos
-        uses: bluefireteam/melos-action@v3
+        uses: bluefireteam/melos-action@b3ccbb59dd75a6c926d54684abd8c5cda074457a
         with:
           tag: true
