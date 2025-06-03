@@ -1,7 +1,7 @@
 name: wnma_workspace
 description: Why not make a Flutter Monorepo Workspace? Powered by whynotmake.it
 repository: https://github.com/whynotmake-it/bricks
-version: 0.1.0
+version: 0.2.0
 
 environment:
   mason: ">=0.1.0 <0.2.0"
