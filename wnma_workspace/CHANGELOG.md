@@ -1,3 +1,6 @@
+## 0.2.1
+- chore: pin melos action to v3
+
 ## 0.2.0
 - feat: update dependencies
 - feat: support graduating prereleases
