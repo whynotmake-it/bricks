@@ -1,3 +1,6 @@
+## 0.3.0
+- **BREAKING** feat: migrate to melos 7.0.0 to support dart and flutter workspaces
+
 ## 0.2.1
 - chore: pin melos action to v3
 

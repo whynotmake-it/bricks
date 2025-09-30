@@ -1,3 +1,8 @@
+## 0.2.0
+
+- **BREAKING** feat: support pub workspaces (such as melos >7.0.0) by adding `resolution: workspace` to the pubspec.yaml
+- feat: updated dependencies
+
 ## 0.1.1
 
 - feat: updated dependencies
