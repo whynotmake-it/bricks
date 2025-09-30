@@ -4,7 +4,8 @@ version: 0.1.0
 publish_to: none
 
 workspace:
-  - # TODO Add your workspace packages or apps here
+ # TODO Add your workspace packages or apps here
+ # - packages/my_package
 
 environment:
   sdk: ">=3.9.0 <4.0.0"
