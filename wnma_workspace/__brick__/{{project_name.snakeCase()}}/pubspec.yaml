@@ -11,9 +11,7 @@ environment:
   flutter: ">=3.35.0"
 
 dev_dependencies:
-  lintervention: ^0.4.0
   melos: ^7.1.1
-
 
 melos:
   command:
