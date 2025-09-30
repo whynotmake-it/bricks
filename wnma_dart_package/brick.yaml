@@ -22,3 +22,8 @@ vars:
     description: Whether the generated package is intended to be published.
     default: false
     prompt: Will the package be published?
+  workspace:
+    type: boolean
+    description: Whether this package is part of a dart workspace (such as melos >7.0.0)
+    default: true
+    prompt: Is this package part of a workspace?

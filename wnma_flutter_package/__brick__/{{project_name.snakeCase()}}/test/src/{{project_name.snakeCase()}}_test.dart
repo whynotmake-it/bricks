@@ -1,3 +1,4 @@
+// We ignore prefer_const_constructors here to make testing more convenient.
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter_test/flutter_test.dart';
 import 'package:{{project_name.snakeCase()}}/{{project_name.snakeCase()}}.dart';
