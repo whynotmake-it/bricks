@@ -1,1 +1,2 @@
-include: package:lintervention/analysis_options.yaml
+{{#publishable}}include: package:lintervention/package.yaml{{/publishable}}
+{{^publishable}}include: package:lintervention/app.yaml{{/publishable}}
